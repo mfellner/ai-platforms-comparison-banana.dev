@@ -42,8 +42,8 @@ def handler(context: dict, request: Request) -> Response:
         generator=torch.Generator(device="cuda").manual_seed(request.json.get("seed"))
         if request.json.get("seed")
         else None,
-        width=512,
-        height=512,
+        width=request.json.get("width", 512),
+        height=request.json.get("height", 768),
     ).images[0]
 
     buffered = BytesIO()

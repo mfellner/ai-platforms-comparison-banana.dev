@@ -64,3 +64,14 @@ Call the model in another terminal window with the Potassium app still running f
 ```sh
 curl -X POST -H 'Content-Type: application/json' -d '{"prompt": "colorful, 1girl, high angle, software developer protagonist, hacker, ((computer screen)), matrix, ((keyboard)), glow, light particles, wallpaper, chromatic aberration"}' http://localhost:8000
 ```
+
+## Testing on Banana.dev
+
+```sh
+curl -X POST \
+ -H 'Content-Type: application/json' \
+ -H 'X-Banana-API-Key: ${BANANA_API_KEY}' \
+ -H 'X-Banana-Model-Key: ${BANANA_MODEL_KEY}' \
+ -d '{"prompt": "colorful, 1girl, high angle, software developer protagonist, hacker, ((computer screen)), matrix, ((keyboard)), glow, light particles, wallpaper, chromatic aberration"}' \
+ ${BANANA_MODEL_URL}
+```
