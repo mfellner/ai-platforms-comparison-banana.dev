@@ -16,7 +16,12 @@ def init():
     ddpm = DDPMScheduler.from_pretrained(repo_id, subfolder="scheduler")
 
     model = DiffusionPipeline.from_pretrained(
-        repo_id, use_safetensors=True, torch_dtype=torch.float16, scheduler=ddpm
+        repo_id,
+        use_safetensors=True,
+        torch_dtype=torch.float16,
+        scheduler=ddpm,
+        safety_checker=None,
+        requires_safety_checker=False,
     ).to("cuda")
 
     context = {
