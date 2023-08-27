@@ -18,9 +18,9 @@ my_model = client.Client(
 prompt = (
     dedent(
         """\
-        colorful, 1girl, high angle, software developer protagonist,
-        hacker, ((computer screen)), matrix, ((keyboard)), glow,
-        light particles, wallpaper, chromatic aberration
+        hero in the woods with a cape and ((sword)),
+        cartoon, disney, glowing, ethereal aura, bright,
+        colorful, vibrant, fantasy, trending on Artstation
         """
     )
     .strip()
